@@ -1,15 +1,9 @@
 import mongoose from "mongoose";
-// const URL="mongodb+srv://shahidtemp7384:mdshahid7384@cluster0.qgbgt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-const URL="mongodb+srv://shahidtemp7384:mdshahid7384@cluster0.27xhh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-// const connection = async () => {
-//     try {
-//         await mongoose.connect(URL);
-//         console.log("database connected");
-//     } catch (error) {
-//         console.log(error.message);
-//     }
-// }
-// export default connection;
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const URL = process.env.MONGODB_URL;
 
 
 async function connectToDatabase() {
